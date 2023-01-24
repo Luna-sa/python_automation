@@ -1,3 +1,5 @@
+from pages.login_page import LoginPage
+from selenium.webdriver.common.by import By
 import os
 import unittest
 from selenium import webdriver
@@ -13,6 +15,10 @@ class Test(unittest.TestCase):
         self.driver.get('https://scouts-test.futbolkolektyw.pl/en')
         self.driver.fullscreen_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
+        test = self.driver.find_element(By.XPATH, "//*[@id='login']")
+        test.send_keys("test@test")
+        print(test)
+
 
     @classmethod
     def tearDown(self):
