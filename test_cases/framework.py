@@ -3,26 +3,12 @@ from selenium.webdriver.common.by import By
 import os
 import unittest
 from selenium import webdriver
+
+from test_cases.default_test_case import SetUpTestCases
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 
 
-class Test(unittest.TestCase):
-
-    @classmethod
-    def setUp(self):
-        os.chmod(DRIVER_PATH, 755)
-        self.driver = webdriver.Chrome(executable_path=DRIVER_PATH)
-        self.driver.get('https://scouts-test.futbolkolektyw.pl/en')
-        self.driver.fullscreen_window()
-        self.driver.implicitly_wait(IMPLICITLY_WAIT)
-        test = self.driver.find_element(By.XPATH, "//*[@id='login']")
-        test.send_keys("test@test")
-        print(test)
-
-
-    @classmethod
-    def tearDown(self):
-        self.driver.quit()
+class Test(SetUpTestCases):
 
     def test_print_nice_words(self):
         print("WELL DONE!!!!!!!!!")

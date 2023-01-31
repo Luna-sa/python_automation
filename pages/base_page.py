@@ -12,3 +12,6 @@ class BasePage():
 
     def click_on_the_element(self, selector, selector_type=By.XPATH):
         return self.driver.find_element(selector_type, selector).click()
+
+    def get_element_text(self, title_selector, selector_type=By.XPATH):
+        return self.driver.find_element(selector_type, title_selector).text
