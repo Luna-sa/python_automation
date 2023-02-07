@@ -5,7 +5,7 @@ class Dashboard(BasePage):
     pass
     main_page_xpath = "//*[@id='__next']/div[1]/div/div/div/ul[1]/div[1]/div[2]/span"
     players_xpath = "//button[text()='Players']"
-    lang_piker_xpath = "//*[@id=['__next']/div[1]/div/div/div/ul[2]/div[1]/div[2]/span"
+    lang_piker_xpath = "//*[@id='__next']/div[1]/div/div/div/ul[2]/div[1]"
     sign_out_xpath = "//button[text()='Sign out']"
     add_player_xpath = "//a[contains(@href, 'en/players/add')]/button"
     dev_team_contact_xpath = "//button[text()='Dev team contact']"

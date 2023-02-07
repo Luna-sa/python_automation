@@ -4,7 +4,7 @@ import os
 import unittest
 from selenium import webdriver
 
-from test_cases.default_test_case import SetUpTestCases
+from test_cases.set_up_test_cases import SetUpTestCases
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 
 

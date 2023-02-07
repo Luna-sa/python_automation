@@ -18,6 +18,11 @@ class LoginPage(BasePage):
     def type_in_password(self, password):
         self.field_send_keys(self.password_field_xpath, password)
 
+    def login_to_the_system(self):
+        self.type_in_email('user10@getnada.com')
+        self.type_in_password('Test-1234')
+        self.click_on_the_element("//*[@id='__next']/form/div/div[2]/button/span[1]")
+
     # def click_on_the_element(self, sign_in_button_xpath, **kwargs):
     #     # self.field_send_keys(self.sign_in_button_xpath, signin).click()
     #     return self.driver.find_element(self.sign_in_button_xpath, sign_in_button_xpath).click()

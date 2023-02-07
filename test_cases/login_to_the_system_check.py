@@ -2,7 +2,7 @@ import time
 
 from pages.dashboard_page import Dashboard
 from pages.login_page import LoginPage
-from test_cases.default_test_case import SetUpTestCases
+from test_cases.set_up_test_cases import SetUpTestCases
 
 
 class TestLoginPage(SetUpTestCases):
