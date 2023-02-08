@@ -46,6 +46,6 @@ class TestAddPlayer(SetUpTestCases):
         user_login.click_on_the_element(dashboard_page.add_player_xpath)
         time.sleep(1)
         add_a_player_page = AddPlayerPage(self.driver)
-        add_a_player_page.field_send_keys(add_a_player_page.add_player_form_name_xpath, "Muse")
+        add_a_player_page.click_on_the_element(add_a_player_page.add_player_form_surname_xpath)
         add_a_player_page.click_on_the_element(add_a_player_page.submit_button_xpath)
         assert add_a_player_page.get_element_text(add_a_player_page.surname_validation_error_xpath) == 'Required'

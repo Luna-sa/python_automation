@@ -6,7 +6,7 @@ class Dashboard(BasePage):
     main_page_xpath = "//*[@id='__next']/div[1]/div/div/div/ul[1]/div[1]/div[2]/span"
     players_xpath = "//button[text()='Players']"
     lang_piker_xpath = "//*[@id='__next']/div[1]/div/div/div/ul[2]/div[1]"
-    sign_out_xpath = "//button[text()='Sign out']"
+    sign_out_xpath = "//*[@id='__next']/div[1]/div/div/div/ul[2]/div[2]"
     add_player_xpath = "//a[contains(@href, 'en/players/add')]/button"
     dev_team_contact_xpath = "//button[text()='Dev team contact']"
     last_created_player_xpath = "//*[@id='__next']/div[1]/main/div[3]/div[3]/div/div/a[1]/button/span[1]"
@@ -15,6 +15,7 @@ class Dashboard(BasePage):
     last_updated_report_xpath = "//*[@id='__next']/div[1]/main/div[3]/div[3]/div/div/a[5]/button/span[1]"
     dashboard_url = 'https://scouts-test.futbolkolektyw.pl/'
     title_dashboard_xpath = '//*[@id="__next"]//h6'
+    players_count_xpath = "//div[contains(@style, 'rgb(244, 67, 54)')]"
 
     expected_title_dashboard = "Scouts Panel"
 
